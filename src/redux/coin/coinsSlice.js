@@ -14,10 +14,10 @@ export const fetchCoins = createAsyncThunk('coins/fetchCoins', async () => {
 })
 
 export const fetchHistory = createAsyncThunk('coins/fetchHistory', async (id) => {
-    const res = await fetch(`https://api.coincap.io/v2/assets/${id}/history?interval=d1&start=1682798295828&end=1685390171964`)  ;
+    const res = await fetch(`https://api.coincap.io/v2/assets/${id}/history?interval=d1&start=1677724800000&end=1685390171964`)  ;
     const result = await res.json();
-    const data = result.data
-    return data
+    console.log('fetchHistory', result.data)
+    return result.data
   
 })
 
