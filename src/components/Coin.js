@@ -1,15 +1,22 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { adjustNumber } from "../helpers/adjustNumber";
+import { fetchHistory } from "../redux/coin/coinsSlice";
 
 function Coin() {
-  const { coinId } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  
+  const { coinId } = useParams();
   const { coins } = useSelector((state) => state.coins);
+  const { history } = useSelector((state) => state.coins)
 
   const coinInfos = coins.find((coin) => coin.id === coinId);
-  console.log(coinInfos);
+
+  useEffect(() => {
+    dispatch(fetchHistory(coinId))
+  }, [])
 
   return (
     <div className="container mx-auto flex flex-col gap-4 bg-gray-100 p-2">
