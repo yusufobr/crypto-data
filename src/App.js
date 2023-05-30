@@ -12,7 +12,7 @@ function App() {
   
   useEffect(() => {
     dispatch(fetchCoins())
-  }, [])
+  }, [dispatch])
 
   return (
     <div>
@@ -20,7 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route index element={<Coins />} />
-          <Route path='/coin/:id' element={<Coin />} />
+          <Route path='/coin/:coinId' element={<Coin />} />
         </Routes>
       </BrowserRouter>
     </div>
