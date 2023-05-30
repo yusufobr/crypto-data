@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import arrowIcon from "./assets/arrow.svg";
+import { adjustNumber } from "../helpers/adjustNumber";
 
 function Coins() {
   const { coins } = useSelector((state) => state.coins);
@@ -20,10 +21,7 @@ function Coins() {
               <span className="text-2xl font-semibold">{coin.name}</span>
               <span>
                 <span>
-                  {parseFloat(coin.priceUsd).toLocaleString(undefined, {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                  })}{" "}
+                  {adjustNumber(coin.priceUsd)}{" "}
                   USD
                 </span>
               </span>
