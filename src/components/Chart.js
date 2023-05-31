@@ -1,15 +1,16 @@
-import React from 'react'
+/* eslint-disable */
+import React from 'react';
 import {
-    AreaChart,
-    Area,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip
-  } from "recharts";
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+} from 'recharts';
 
 function Chart(props) {
-    const { history } = props
+  const { history } = props;
   return (
     <AreaChart
       width={400}
@@ -19,7 +20,7 @@ function Chart(props) {
         top: 10,
         right: 30,
         left: 0,
-        bottom: 0
+        bottom: 0,
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
@@ -28,7 +29,7 @@ function Chart(props) {
       <Tooltip />
       <Area type="monotone" dataKey="priceUsd" stroke="#3f3f3f" fill="#b8b8b8" />
     </AreaChart>
-  )
+  );
 }
 
-export default Chart
+export default Chart;
