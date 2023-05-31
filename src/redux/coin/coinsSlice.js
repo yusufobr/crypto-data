@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const URL = 'https://api.coincap.io/v2/assets?limit=20';
+const URL = 'https://api.coincap.io/v2/assets?limit=50';
 
 const currentTimeStamp = Date.now();
 

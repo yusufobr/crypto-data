@@ -9,7 +9,7 @@ function Coins() {
   const navigate = useNavigate();
 
   return (
-    <div className="container p-2 mx-auto grid grid-cols-2 gap-4">
+    <div className="container p-2 mx-auto mb-8 grid grid-cols-2 gap-4">
       {coins.map((coin) => (
         <div
           key={coin.id}
@@ -21,14 +21,15 @@ function Coins() {
           }}
           role="button"
           tabIndex={0}
-          className="flex flex-col h-[100%] gap-4 mygradien pb-[%100] relative cursor-pointer rounded shadow-md "
+          className="flex flex-col h-[100%] gap-4 mygradien pb-[%100] relative cursor-pointer rounded-lg shadow-md "
         >
           <div className="p-3 h-48 flex flex-col z-10 justify-between items-end">
             <img width={25} alt="arrow" src={arrowIcon} />
             <div className="flex flex-col items-end">
               <span className="text-2xl font-bold text-[#2911DF]">{coin.name}</span>
               <span>
-                <span className="font-semibold text-[#DFE7ED]">
+                <span className={`font-semibold ${coin.changePercent24Hr < 0 ? 'text-red-500' : 'text-green-700'}`}>
+                  {coin.changePercent24Hr < 0 ? <span className="text-lg font-bold">⇩ </span> : <span className="text-lg font-bold">⇧ </span>}
                   {adjustNumber(coin.priceUsd)}
                   {' '}
                   USD

@@ -27,7 +27,7 @@ function Chart(props) {
       <XAxis dataKey="date" />
       <YAxis />
       <Tooltip />
-      <Area type="monotone" dataKey="priceUsd" stroke="#2911DF" fill="#BFDBFE" />
+      <Area type="monotone" dataKey="priceUsd" stroke="#2911DF" fill="#D3F70E" />
     </AreaChart>
     </ResponsiveContainer>
   );
