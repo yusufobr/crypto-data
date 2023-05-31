@@ -7,14 +7,14 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ResponsiveContainer,
 } from 'recharts';
 
 function Chart(props) {
   const { history } = props;
   return (
+    <ResponsiveContainer width="95%" height={300}>
     <AreaChart
-      width={400}
-      height={280}
       data={history}
       margin={{
         top: 10,
@@ -27,8 +27,9 @@ function Chart(props) {
       <XAxis dataKey="date" />
       <YAxis />
       <Tooltip />
-      <Area type="monotone" dataKey="priceUsd" stroke="#3f3f3f" fill="#b8b8b8" />
+      <Area type="monotone" dataKey="priceUsd" stroke="#2911DF" fill="#BFDBFE" />
     </AreaChart>
+    </ResponsiveContainer>
   );
 }
 

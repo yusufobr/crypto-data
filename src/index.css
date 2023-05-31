@@ -1,4 +1,24 @@
-.recharts-wrapper {
+body {
+  background-color: #2911df;
+  color: white;
+}
+
+.recharts-responsive-container {
   margin-left: auto;
   margin-right: auto;
+}
+
+.myeven li {
+  height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.myeven li:nth-child(even) {
+  background-color: #bfdbfe50;
+}
+
+.mygradien {
+  background: rgb(223, 231, 237);
+  background: linear-gradient(45deg, rgba(223, 231, 237, 1) 0%, rgba(144, 130, 255, 1) 100%);
 }

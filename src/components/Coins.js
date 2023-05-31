@@ -21,14 +21,14 @@ function Coins() {
           }}
           role="button"
           tabIndex={0}
-          className="flex flex-col h-[100%] gap-4 bg-gray-100 pb-[%100] relative cursor-pointer rounded"
+          className="flex flex-col h-[100%] gap-4 mygradien pb-[%100] relative cursor-pointer rounded shadow-md "
         >
           <div className="p-3 h-48 flex flex-col z-10 justify-between items-end">
             <img width={25} alt="arrow" src={arrowIcon} />
             <div className="flex flex-col items-end">
-              <span className="text-2xl font-semibold">{coin.name}</span>
+              <span className="text-2xl font-bold text-[#2911DF]">{coin.name}</span>
               <span>
-                <span>
+                <span className="font-semibold text-[#DFE7ED]">
                   {adjustNumber(coin.priceUsd)}
                   {' '}
                   USD
@@ -37,7 +37,7 @@ function Coins() {
             </div>
           </div>
           <div className="absolute w-full h-full flex items-center justify-center overflow-hidden">
-            <span className="text-3xl uppercase font-extrabold text-center text-gray-300 ">
+            <span className="text-3xl uppercase font-extrabold text-center opacity-50 text-white ">
               {coin.id.slice(0, 16)}
             </span>
           </div>
