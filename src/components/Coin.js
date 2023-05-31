@@ -30,6 +30,8 @@ function Coin() {
     setTheGraphData(modifiedHistory);
   }, 1000);
 
+  const nv = 'Not Available';
+
   return (
     <div className="container mx-auto flex flex-col gap-4 bg-gray-100 p-2">
       <button type="button" className="mb-8" onClick={() => navigate('/')}>
@@ -45,34 +47,77 @@ function Coin() {
         </span>
 
         <div>
-          {Object.entries(coinInfos).map(([property, value], index) => (
-            <div className="flex justify-between text-lg" key={property}>
-              <span>{property}</span>
-              {(index > 3 && index < 9) ? (
-                <span>
-                  {value ? `${adjustNumber(value)} $` : 'not available'}
-                </span>
-              ) : index === 9 || index === 10 ? (
-                <span>{`${adjustNumber(value)} %`}</span>
-              ) : (
-                <span>{value || 'not available'}</span>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* <span>{coinInfos.id}</span>
+          <ul>
+            <li className="flex justify-between">
+              <span>Symbol</span>
               <span>{coinInfos.symbol}</span>
-              <span>{coinInfos.name}</span>
+            </li>
+            <li className="flex justify-between">
+              <span>Rank</span>
               <span>{coinInfos.rank}</span>
-              <span>{adjustNumber(coinInfos.supply)}</span>
-              <span>{adjustNumber(coinInfos.maxSupply)}</span>
-              <span>{adjustNumber(coinInfos.marketCapUsd)}</span>
-              <span>{adjustNumber(coinInfos.volumeUsd24Hr)}</span>
-              <span>{adjustNumber(coinInfos.priceUsd)}</span>
-              <span>{adjustNumber(coinInfos.changePercent24Hr)}</span>
-              <span>{adjustNumber(coinInfos.vwap24Hr)}</span>
-              <span>{coinInfos.explorer}</span> */}
+            </li>
+            <li className="flex justify-between">
+              <span>Price USD</span>
+              <span>{`${adjustNumber(coinInfos.priceUsd)} $`}</span>
+            </li>
+            <li className="flex justify-between">
+              <span>Supply</span>
+              <span>{`${adjustNumber(coinInfos.supply)} $`}</span>
+            </li>
+            <li className="flex justify-between">
+              <span>Max Supply USD</span>
+              <span>
+                {`${
+                  coinInfos.maxSupply ? adjustNumber(coinInfos.maxSupply) : nv
+                }`}
+              </span>
+            </li>
+            <li className="flex justify-between">
+              <span>Market Capital USD</span>
+              <span>
+                {`${
+                  coinInfos.marketCapUsd
+                    ? adjustNumber(coinInfos.marketCapUsd)
+                    : nv
+                } $`}
+              </span>
+            </li>
+            <li className="flex justify-between">
+              <span>Volume 24h USD</span>
+              <span>
+                {`${
+                  coinInfos.volumeUsd24Hr
+                    ? adjustNumber(coinInfos.volumeUsd24Hr)
+                    : nv
+                } $`}
+              </span>
+            </li>
+            <li className="flex justify-between">
+              <span>Last 24h Change</span>
+              <span
+                className={
+                  coinInfos.changePercent24Hr < 0
+                    ? 'text-red-500'
+                    : 'text-green-500'
+                }
+              >
+                {`${
+                  coinInfos.changePercent24Hr
+                    ? adjustNumber(coinInfos.changePercent24Hr)
+                    : nv
+                } %`}
+              </span>
+            </li>
+          </ul>
+          <a
+            type="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={coinInfos.explorer}
+          >
+            Explore
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -2,6 +2,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const URL = 'https://api.coincap.io/v2/assets?limit=20';
 
+const currentTimeStamp = Date.now();
+
 const initialState = {
   coins: [],
   history: [],
@@ -14,9 +16,8 @@ export const fetchCoins = createAsyncThunk('coins/fetchCoins', async () => {
 });
 
 export const fetchHistory = createAsyncThunk('coins/fetchHistory', async (id) => {
-  const res = await fetch(`https://api.coincap.io/v2/assets/${id}/history?interval=d1&start=1677724800000&end=1685390171964`);
+  const res = await fetch(`https://api.coincap.io/v2/assets/${id}/history?interval=d1&start=1677724800000&end=${currentTimeStamp}`);
   const result = await res.json();
-  console.log('fetchHistory', result.data);
   return result.data;
 });
 
