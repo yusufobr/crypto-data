@@ -40,7 +40,7 @@ function Coin() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <span className="text-3xl uppercase font-extrabold text-center text-gray-300 ">
+        <span className="text-4xl uppercase font-extrabold text-center text-gray-300 ">
           {coinInfos.id.slice(0, 16)}
         </span>
 
