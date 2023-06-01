@@ -43,7 +43,7 @@ function Coins() {
           <div className="p-3 h-48 flex flex-col z-10 justify-between items-end">
             <img width={25} alt="arrow" src={arrowIcon} />
             <div className="flex flex-col items-end">
-              <span className="text-2xl font-bold text-[#2911DF]">
+              <span className="text-2xl font-bold text-white">
                 {coin.name}
               </span>
               <span>
