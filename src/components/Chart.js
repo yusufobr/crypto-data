@@ -1,34 +1,36 @@
-import React from 'react'
+/* eslint-disable */
+import React from 'react';
 import {
-    AreaChart,
-    Area,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip
-  } from "recharts";
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from 'recharts';
 
 function Chart(props) {
-    const { history } = props
+  const { history } = props;
   return (
+    <ResponsiveContainer width="95%" height={300}>
     <AreaChart
-      width={400}
-      height={280}
       data={history}
       margin={{
         top: 10,
         right: 30,
         left: 0,
-        bottom: 0
+        bottom: 0,
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="date" />
+      <XAxis dataKey="Date" />
       <YAxis />
       <Tooltip />
-      <Area type="monotone" dataKey="priceUsd" stroke="#3f3f3f" fill="#b8b8b8" />
+      <Area type="monotone" dataKey="USD" stroke="#2911DF" fill="#D3F70E" />
     </AreaChart>
-  )
+    </ResponsiveContainer>
+  );
 }
 
-export default Chart
+export default Chart;
