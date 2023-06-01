@@ -56,27 +56,27 @@ function Coin() {
         </div>
         <div className="flex flex-col gap-2">
           <span className="text-4xl uppercase font-extrabold text-center mt-4 text-[#161B19] ">
-            {coinInfos.id.slice(0, 16)}
+            {coinInfos?.id?.slice(0, 16)}
           </span>
           <div>
             <ul className="flex flex-col text-lg myeven">
               <li className="flex justify-between items-center">
                 <span>Symbol</span>
-                <span>{coinInfos.symbol}</span>
+                <span>{coinInfos?.symbol}</span>
               </li>
               <li className="flex justify-between items-center">
                 <span>Price USD</span>
-                <span className="font-semibold">{`${adjustNumber(coinInfos.priceUsd)} $`}</span>
+                <span className="font-semibold">{`${adjustNumber(coinInfos?.priceUsd)} $`}</span>
               </li>
               <li className="flex justify-between items-center">
                 <span>Supply</span>
-                <span>{`${adjustNumber(coinInfos.supply)} $`}</span>
+                <span>{`${adjustNumber(coinInfos?.supply)} $`}</span>
               </li>
               <li className="flex justify-between items-center">
                 <span>Max Supply USD</span>
                 <span>
                   {`${
-                    coinInfos.maxSupply ? adjustNumber(coinInfos.maxSupply) : nv
+                    coinInfos?.maxSupply ? adjustNumber(coinInfos?.maxSupply) : nv
                   }`}
                 </span>
               </li>
@@ -84,8 +84,8 @@ function Coin() {
                 <span>Market Capital USD</span>
                 <span>
                   {`${
-                    coinInfos.marketCapUsd
-                      ? adjustNumber(coinInfos.marketCapUsd)
+                    coinInfos?.marketCapUsd
+                      ? adjustNumber(coinInfos?.marketCapUsd)
                       : nv
                   } $`}
                 </span>
@@ -94,28 +94,28 @@ function Coin() {
                 <span>Volume 24h USD</span>
                 <span>
                   {`${
-                    coinInfos.volumeUsd24Hr
-                      ? adjustNumber(coinInfos.volumeUsd24Hr)
+                    coinInfos?.volumeUsd24Hr
+                      ? adjustNumber(coinInfos?.volumeUsd24Hr)
                       : nv
                   } $`}
                 </span>
               </li>
               <li className="flex justify-between items-center">
                 <span>Rank</span>
-                <span>{coinInfos.rank}</span>
+                <span>{coinInfos?.rank}</span>
               </li>
               <li className="flex justify-between items-center">
                 <span>Last 24h Change</span>
                 <span
                   className={
-                  coinInfos.changePercent24Hr < 0
+                  coinInfos?.changePercent24Hr < 0
                     ? 'text-red-500'
                     : 'text-green-500'
                 }
                 >
                   {`${
-                    coinInfos.changePercent24Hr
-                      ? adjustNumber(coinInfos.changePercent24Hr)
+                    coinInfos?.changePercent24Hr
+                      ? adjustNumber(coinInfos?.changePercent24Hr)
                       : nv
                   } %`}
                 </span>
@@ -129,7 +129,7 @@ function Coin() {
         type="button"
         target="_blank"
         rel="noopener noreferrer"
-        href={coinInfos.explorer}
+        href={coinInfos?.explorer}
         className="text-right pt-4"
       >
         <span className="py-2 text-black px-8 bg-[#1dd79c] rounded">Website</span>

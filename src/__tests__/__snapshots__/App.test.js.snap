@@ -29,7 +29,7 @@ exports[`App.js should render correctly 1`] = `
       className="col-span-2 shadow-md mt-6"
     >
       <input
-        className="w-full h-10 text-black p-2 rounded-lg"
+        className="w-full h-14 text-black p-2 rounded-lg"
         onChange={[Function]}
         placeholder="Search currency..."
         role="button"
