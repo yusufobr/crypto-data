@@ -81,7 +81,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/yusufobr/crypto-coins.git
+  git clone https://github.com/yusufobr/crypto-data.git
 ```
 
 ### Install
@@ -89,7 +89,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd crypto-coins
+  cd crypto-data
   npm install
 ```
 
@@ -104,9 +104,7 @@ Install this project with:
 To run tests, run the following command:
 
 ```sh
-  npx hint .
-  npx stylelint "\*_/_.{css,scss}"
-  npx eslint "**/*.{js,jsx}"
+  npm run test
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
