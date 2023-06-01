@@ -13,7 +13,6 @@ function Coins() {
     .filter((coin) => coin.id
       .toLowerCase()
       .includes(search.toLowerCase()));
-  console.log(filteredData);
 
   return (
     <div className="container p-2 mx-auto mb-8 grid grid-cols-2 gap-4">

@@ -25,5 +25,5 @@ body {
 
 .mygradien:hover {
   background: #399dfa;
-  background: linear-gradient(45deg, #D3F70E 0%, rgb(112, 93, 255) 100%);
+  background: linear-gradient(45deg, #d3f70e 0%, rgb(112, 93, 255) 100%);
 }
