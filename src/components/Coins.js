@@ -20,7 +20,7 @@ function Coins() {
         <input
           type="text"
           placeholder="Search currency..."
-          className="w-full h-10 text-black p-2 rounded-lg"
+          className="w-full h-14 text-black p-2 rounded-lg"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           role="button"
@@ -43,21 +43,21 @@ function Coins() {
           <div className="p-3 h-48 flex flex-col z-10 justify-between items-end">
             <img width={25} alt="arrow" src={arrowIcon} />
             <div className="flex flex-col items-end">
-              <span className="text-2xl font-bold text-white">
+              <span className="text-2xl font-semibold text-white">
                 {coin.name}
               </span>
               <span>
                 <span
-                  className={`font-semibold ${
+                  className={`font-light text-sm ${
                     coin.changePercent24Hr < 0
                       ? 'text-red-500'
-                      : 'text-green-700'
+                      : 'text-[#26E96C]'
                   }`}
                 >
                   {coin.changePercent24Hr < 0 ? (
-                    <span className="text-lg font-bold">⇩ </span>
+                    <span className="font-bold">⇩ </span>
                   ) : (
-                    <span className="text-lg font-bold">⇧ </span>
+                    <span className="font-bold">⇧ </span>
                   )}
                   {adjustNumber(coin.priceUsd)}
                   {' '}
@@ -67,7 +67,7 @@ function Coins() {
             </div>
           </div>
           <div className="absolute w-full h-full flex items-center justify-center overflow-hidden">
-            <span className="text-3xl uppercase font-extrabold text-center opacity-50 text-white ">
+            <span className="text-3xl uppercase font-extrabold text-center text-[#161B19]">
               {coin.id.slice(0, 16)}
             </span>
           </div>

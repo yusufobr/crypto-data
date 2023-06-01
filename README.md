@@ -1,8 +1,7 @@
 <a name="readme-top">
     <img width="250" src="./src/components/assets/logo.png" />
 </a>
-<hr>
-<br />
+<br /><br />
 
 <!-- TABLE OF CONTENTS -->
 
@@ -60,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://vercel.app/)
+- [Live Demo Link](https://profound-cendol-db4de9.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

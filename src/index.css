@@ -1,5 +1,5 @@
 body {
-  background-color: #2911df;
+  background-color: #161b19;
   color: white;
 }
 
@@ -15,15 +15,18 @@ body {
 }
 
 .myeven li:nth-child(even) {
-  background-color: #bfdbfe50;
+  background-color: #222726;
 }
 
 .mygradien {
-  background: #2911DF;
-  background: linear-gradient(45deg, #1800ce 0%, #d3f70e50 100%);
+  background: #1e2423;
+  border: 1px solid rgb(15, 24, 22);
 }
 
 .mygradien:hover {
-  background: #d3f70e;
-  background: linear-gradient(45deg, #d3f70e 0%, rgb(112, 93, 255) 100%);
+  border-color: #1dd79c;
+}
+
+input {
+  background-color: #1e2423;
 }

@@ -34,7 +34,7 @@ function Coin() {
   const nv = 'Not Available';
 
   return (
-    <div className="container p-2 mx-auto flex flex-col gap-4 text-black py-2 mb-8">
+    <div className="container p-2 mx-auto flex flex-col gap-4 text-white py-2 mb-8">
       {/* back btn */}
       <button
         type="button"
@@ -43,19 +43,19 @@ function Coin() {
       >
         <img
           width={40}
-          className="p-2 bg-[#D3F70E] rounded-full"
+          className="p-2 bg-[#1dd79c] rounded-full"
           src={arrow}
           alt="backarrow"
         />
       </button>
 
-      <div className="rounded-md bg-white pt-16 pb-4">
+      <div className="rounded-lg shadow-md bg-[#1E2423] pt-16 pb-4">
         {/* chart */}
         <div className="">
           <Chart history={theGraphData} />
         </div>
         <div className="flex flex-col gap-2">
-          <span className="text-4xl uppercase font-extrabold text-center text-gray-300 ">
+          <span className="text-4xl uppercase font-extrabold text-center mt-4 text-[#161B19] ">
             {coinInfos.id.slice(0, 16)}
           </span>
           <div>
@@ -132,7 +132,7 @@ function Coin() {
         href={coinInfos.explorer}
         className="text-right pt-4"
       >
-        <span className="py-2 px-8 bg-[#D3F70E] rounded">Website</span>
+        <span className="py-2 text-black px-8 bg-[#1dd79c] rounded">Website</span>
       </a>
     </div>
   );
