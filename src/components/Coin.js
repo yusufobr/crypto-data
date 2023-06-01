@@ -25,8 +25,8 @@ function Coin() {
   setTimeout(() => {
     const modifiedHistory = history.map((item) => ({
       ...item,
-      priceUsd: Number(item.priceUsd),
-      date: item.date.split('T')[0],
+      USD: Number(item.priceUsd),
+      Date: item.date.split('T')[0],
     }));
     setTheGraphData(modifiedHistory);
   }, 1000);
