@@ -19,11 +19,11 @@ body {
 }
 
 .mygradien {
-  background: rgb(223, 231, 237);
-  background: linear-gradient(45deg, rgba(223, 231, 237, 1) 0%, rgba(144, 130, 255, 1) 100%);
+  background: #399dfa;
+  background: linear-gradient(45deg, #399dfa 0%, rgba(144, 130, 255, 1) 100%);
 }
 
 .mygradien:hover {
-  background: rgb(223, 231, 237);
-  background: linear-gradient(45deg, rgba(223, 231, 237, 1) 0%, rgb(112, 93, 255) 100%);
+  background: #399dfa;
+  background: linear-gradient(45deg, #D3F70E 0%, rgb(112, 93, 255) 100%);
 }
