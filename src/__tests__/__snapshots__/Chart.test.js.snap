@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart.js should render correctly 1`] = `
+<div
+  className="recharts-responsive-container"
+  style={
+    Object {
+      "height": 300,
+      "maxHeight": undefined,
+      "minHeight": undefined,
+      "minWidth": 0,
+      "width": "95%",
+    }
+  }
+/>
+`;
