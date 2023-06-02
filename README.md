@@ -31,6 +31,10 @@
 
 **Crypto Coin** is a project of creating a responsive web app using React, Redux, Tailwindcss, Rechart library and Behance design to design the layout.
 
+Screenshot :
+
+<img width="500" src="./src/components/assets/crypto.gif" />
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
