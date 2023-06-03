@@ -1,6 +1,8 @@
+<div align="center">
 <a name="readme-top">
     <img width="250" src="./src/components/assets/logo.png" />
-</a>
+</a>    
+</div>
 <br /><br />
 
 <!-- TABLE OF CONTENTS -->
