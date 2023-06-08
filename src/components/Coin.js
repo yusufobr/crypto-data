@@ -53,7 +53,7 @@ function Coin() {
         />
       </button>
 
-      <div className="rounded-lg shadow-md bg-[#1E2423] pt-16 pb-4">
+      <div className="rounded-lg shadow-md bg-[#1E2423] pt-16 overflow-hidden">
         {/* chart */}
         <div className="">
           <Chart history={theGraphData} />

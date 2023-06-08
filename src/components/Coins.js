@@ -49,12 +49,12 @@ function Coins() {
           <div className="p-3 h-48 flex flex-col z-10 justify-between items-end">
             <img width={25} alt="arrow" src={arrowIcon} />
             <div className="flex flex-col items-end">
-              <span className="text-2xl font-semibold text-white">
+              <span className="text-2xl font-bold text-white">
                 {coin.name}
               </span>
               <span>
                 <span
-                  className={`font-light flex gap-1 items-center text-sm ${
+                  className={`flex gap-1 items-center text-sm ${
                     coin.changePercent24Hr < 0
                       ? 'text-red-500'
                       : 'text-[#26E96C]'
@@ -81,7 +81,7 @@ function Coins() {
             </div>
           </div>
           <div className="absolute w-full h-full flex items-center justify-center overflow-hidden">
-            <span className="text-3xl uppercase font-extrabold text-center text-[#161B19] glow-child">
+            <span className="text-3xl uppercase font-black text-center text-[#161B19] glow-child">
               {coin.id.slice(0, 16)}
             </span>
           </div>
