@@ -31,10 +31,14 @@ function Coin() {
     setTheGraphData(modifiedHistory);
   }, 1000);
 
+  useEffect(() => {
+    document.title = `${coinInfos.name} | Details`;
+  }, [coinInfos]);
+
   const nv = 'Not Available';
 
   return (
-    <div className="container p-2 mx-auto flex flex-col gap-4 text-white py-2 mb-8">
+    <div className="container p-2 mx-auto mt-24 flex flex-col gap-4 text-black py-2 mb-8">
       {/* back btn */}
       <button
         type="button"
@@ -43,7 +47,7 @@ function Coin() {
       >
         <img
           width={40}
-          className="p-2 bg-[#1dd79c] rounded-full"
+          className="p-2 bg-[#1dd79c] rounded-full hover:bg-[#14e6a3]"
           src={arrow}
           alt="backarrow"
         />
@@ -54,7 +58,7 @@ function Coin() {
         <div className="">
           <Chart history={theGraphData} />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-white">
           <span className="text-4xl uppercase font-extrabold text-center mt-4 text-[#161B19] ">
             {coinInfos?.id?.slice(0, 16)}
           </span>
@@ -132,7 +136,7 @@ function Coin() {
         href={coinInfos?.explorer}
         className="text-right pt-4"
       >
-        <span className="py-2 text-black px-8 bg-[#1dd79c] rounded">Website</span>
+        <span className="py-2 text-black px-8 bg-[#1dd79c] rounded hover:bg-[#14e6a3]">Website</span>
       </a>
     </div>
   );
