@@ -5,6 +5,7 @@ import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import arrowIcon from './assets/arrow.svg';
 import adjustNumber from '../helpers/adjustNumber';
+import LoadingCards from './LoadingCards';
 
 function Coins() {
   const { coins, isLoading } = useSelector((state) => state.coins);
@@ -33,16 +34,7 @@ function Coins() {
           <BiSearchAlt2 size={28} />
         </div>
       </div>
-      {isLoading ? (
-        <>
-          <div className="rounded-lg shadow-md mygradienloading h-48" />
-          <div className="rounded-lg shadow-md mygradienloading h-48" />
-          <div className="rounded-lg shadow-md mygradienloading h-48" />
-          <div className="rounded-lg shadow-md mygradienloading h-48" />
-          <div className="rounded-lg shadow-md mygradienloading h-48" />
-          <div className="rounded-lg shadow-md mygradienloading h-48" />
-        </>
-      ) : ''}
+      {isLoading ? <LoadingCards /> : ''}
       {filteredData.map((coin) => (
         <div
           key={coin.id}
