@@ -7,6 +7,7 @@ const currentTimeStamp = Date.now();
 const initialState = {
   coins: [],
   history: [],
+  isLoading: false,
 };
 
 export const fetchCoins = createAsyncThunk('coins/fetchCoins', async () => {
@@ -15,19 +16,29 @@ export const fetchCoins = createAsyncThunk('coins/fetchCoins', async () => {
   return result.data;
 });
 
-export const fetchHistory = createAsyncThunk('coins/fetchHistory', async (id) => {
-  const res = await fetch(`https://api.coincap.io/v2/assets/${id}/history?interval=d1&start=1677724800000&end=${currentTimeStamp}`);
-  const result = await res.json();
-  return result.data;
-});
+export const fetchHistory = createAsyncThunk(
+  'coins/fetchHistory',
+  async (id) => {
+    const res = await fetch(
+      `https://api.coincap.io/v2/assets/${id}/history?interval=d1&start=1677724800000&end=${currentTimeStamp}`,
+    );
+    const result = await res.json();
+    return result.data;
+  },
+);
 
 const coinsSlice = createSlice({
   name: 'coins',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(fetchCoins.fulfilled, (state, action) => {
-      state.coins = [...action.payload];
-    })
+    builder
+      .addCase(fetchCoins.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchCoins.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.coins = [...action.payload];
+      })
       .addCase(fetchHistory.fulfilled, (state, action) => {
         state.history = action.payload;
       });

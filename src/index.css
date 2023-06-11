@@ -30,6 +30,19 @@ body {
   border: 1px solid rgb(15, 24, 22);
 }
 
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+.mygradienloading {
+  background: #1e2423;
+  background: linear-gradient(110deg, #1e2423 8%, #282e2d 18%, #1e2423 33%);
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+
 .mygradien:hover {
   border-color: #1dd79c;
 }

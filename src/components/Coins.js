@@ -7,7 +7,7 @@ import arrowIcon from './assets/arrow.svg';
 import adjustNumber from '../helpers/adjustNumber';
 
 function Coins() {
-  const { coins } = useSelector((state) => state.coins);
+  const { coins, isLoading } = useSelector((state) => state.coins);
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
 
@@ -18,7 +18,7 @@ function Coins() {
   }, []);
 
   return (
-    <div className="container p-2 mx-auto mb-8 mt-24 grid grid-cols-2 gap-4">
+    <div className="container max-w-screen-xl max-xl p-2 mx-auto mb-8 mt-24 grid grid-cols-2 gap-4">
       <div className="col-span-2 relative shadow-md mt-6">
         <input
           type="text"
@@ -33,6 +33,16 @@ function Coins() {
           <BiSearchAlt2 size={28} />
         </div>
       </div>
+      {isLoading ? (
+        <>
+          <div className="rounded-lg shadow-md mygradienloading h-48" />
+          <div className="rounded-lg shadow-md mygradienloading h-48" />
+          <div className="rounded-lg shadow-md mygradienloading h-48" />
+          <div className="rounded-lg shadow-md mygradienloading h-48" />
+          <div className="rounded-lg shadow-md mygradienloading h-48" />
+          <div className="rounded-lg shadow-md mygradienloading h-48" />
+        </>
+      ) : ''}
       {filteredData.map((coin) => (
         <div
           key={coin.id}

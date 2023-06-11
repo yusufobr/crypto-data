@@ -38,7 +38,7 @@ function Coin() {
   const nv = 'Not Available';
 
   return (
-    <div className="container p-2 mx-auto mt-24 flex flex-col gap-4 text-black py-2 mb-8">
+    <div className="container max-w-screen-xl p-2 mx-auto mt-24 flex flex-col gap-4 text-black py-2 mb-8">
       {/* back btn */}
       <button
         type="button"
